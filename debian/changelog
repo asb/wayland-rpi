@@ -1,5 +1,6 @@
-wayland (0.95.0-1) UNRELEASED; urgency=low
+wayland (0.95.0+git20120814-1) UNRELEASED; urgency=low
 
+  [ Timo Aaltonen ]
   * New upstream release.
   * Migrate to multiarch.
   * copyright: Refresh.
@@ -16,7 +17,10 @@ wayland (0.95.0-1) UNRELEASED; urgency=low
   * Add README.source
   * Switch to source format 3.0 (quilt) due to the xz tarball.
 
- -- Timo Aaltonen <tjaalton@ubuntu.com>  Thu, 16 Aug 2012 13:04:41 +0300
+  [ Alex Bradbury ]
+  * bump version
+
+ -- Alex Bradbury <asb@jaguar>  Thu, 23 Aug 2012 14:25:07 +0000
 
 wayland (0.85.0-2) unstable; urgency=low
 
