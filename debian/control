@@ -1,0 +1,74 @@
+Source: wayland
+Section: x11
+Priority: optional
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Build-Depends:
+ debhelper (>= 9),
+ quilt,
+ dh-autoreconf,
+ pkg-config,
+ libexpat1-dev,
+ libffi-dev,
+Standards-Version: 3.9.3
+Vcs-Git: git://git.debian.org/git/pkg-xorg/wayland/wayland
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/wayland/wayland.git
+
+Package: libwayland0
+Section: libs
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: wayland compositor infrastructure - shared libraries
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This is an experimental library package, neither ABI or API are fixed
+ right now. As a consequence, generated dependencies are made as
+ strict as possible. It should only be used by mesa and weston for
+ the time being.
+
+Package: libwayland0-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends:
+ libwayland0 (= ${binary:Version}),
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: wayland compositor infrastructure - shared libraries (debug)
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package contains the debug version of the libraries found in
+ libwayland0. Non-developers likely have little use for this package.
+
+Package: libwayland-dev
+Section: libdevel
+Architecture: any
+Priority: extra
+Depends:
+ libwayland0 (= ${binary:Version}),
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: wayland compositor infrastructure - development files
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package contains the development headers for the libraries found
+ in libwayland0. Non-developers likely have little use for this package.

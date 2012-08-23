@@ -1,0 +1,63 @@
+wayland (0.95.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+  * Migrate to multiarch.
+  * copyright: Refresh.
+  * control: Update Standards-Version to 3.9.3, no changes.
+  * rules: Make it non-fatal to fail the tests, which don't all succeed
+    when ran in headless mode.
+  * rules: Drop the creation of hard dependencies, wayland should be
+    mostly API stable now.
+  * rules: Drop dh_auto_install override.  dh_auto_install automatically
+    installs to debian/tmp whenever there are multiple binary packages.
+  * libwayland*.install: Add missing files.
+  * rules: Temporarily disable installing the protocol docs, decide where
+    to put them first.
+  * Add README.source
+  * Switch to source format 3.0 (quilt) due to the xz tarball.
+
+ -- Timo Aaltonen <tjaalton@ubuntu.com>  Thu, 16 Aug 2012 13:04:41 +0300
+
+wayland (0.85.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Wayland/Weston aren't quite ready to replace Xorg yet, but let's
+    upload those to unstable anyway, so that people can find out by
+    themselves. On the plus side, mesa can stop getting wayland support
+    enabled in experimental, then disabled back when uploaded to unstable.
+  * Update long description, wayland-demos got replaced by weston.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 29 Apr 2012 22:34:18 +0200
+
+wayland (0.85.0-1) experimental; urgency=low
+
+  * First upstream release:
+    - http://article.gmane.org/gmane.comp.freedesktop.wayland.devel/1770
+  * Update watch file, even if that's only useful for notifications:
+    upstream releases xz tarballs, and the 1.0 source format only suports
+    gz.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 10 Feb 2012 11:51:36 +0100
+
+wayland (0.1.0~2-1) experimental; urgency=low
+
+  * New upstream snapshot.
+  * Update symbols file.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 30 Jan 2012 22:37:54 +0100
+
+wayland (0.1.0~1-1) experimental; urgency=low
+
+  * New upstream snapshot.
+  * Update symbols file.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 23 Dec 2011 14:45:10 +0100
+
+wayland (0.1.0~0-1) experimental; urgency=low
+
+  * Initial release (Closes: #611400).
+  * debian/rules contains a gentarball target to create a tarball from the
+    upstream-experimental branch, to be used until some upstream release
+    happens.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 18 Jun 2011 13:38:40 +0200

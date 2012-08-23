@@ -1,0 +1,7 @@
+# Use no wildcards to ensure we spot any update:
+usr/lib/*/libwayland-client.so.0
+usr/lib/*/libwayland-client.so.0.0.0
+usr/lib/*/libwayland-cursor.so.0
+usr/lib/*/libwayland-cursor.so.0.0.0
+usr/lib/*/libwayland-server.so.0
+usr/lib/*/libwayland-server.so.0.0.0
