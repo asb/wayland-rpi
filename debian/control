@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Cyril Brulebois <kibi@debian.org>
 Build-Depends:
- debhelper (>= 9),
+ debhelper (>= 8),
  quilt,
  dh-autoreconf,
  pkg-config,
@@ -14,11 +14,10 @@ Standards-Version: 3.9.3
 Vcs-Git: git://git.debian.org/git/pkg-xorg/wayland/wayland
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/wayland/wayland.git
 
-Package: libwayland0
+Package: libwayland0-rpi
 Section: libs
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
-Multi-Arch: same
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -35,7 +34,7 @@ Description: wayland compositor infrastructure - shared libraries
  strict as possible. It should only be used by mesa and weston for
  the time being.
 
-Package: libwayland0-dbg
+Package: libwayland0-rpi-dbg
 Section: debug
 Priority: extra
 Architecture: any
@@ -54,12 +53,12 @@ Description: wayland compositor infrastructure - shared libraries (debug)
  This package contains the debug version of the libraries found in
  libwayland0. Non-developers likely have little use for this package.
 
-Package: libwayland-dev
+Package: libwayland-rpi-dev
 Section: libdevel
 Architecture: any
 Priority: extra
 Depends:
- libwayland0 (= ${binary:Version}),
+ libwayland0-rpi (= ${binary:Version}),
  ${shlibs:Depends},
  ${misc:Depends},
 Description: wayland compositor infrastructure - development files

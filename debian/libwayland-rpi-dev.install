@@ -1,0 +1,18 @@
+# Tool to build various other packages:
+opt/wayland-rpi/bin/wayland-scanner
+
+# Headers:
+opt/wayland-rpi/include
+
+# Use no wildcards to ensure we spot any update:
+opt/wayland-rpi/lib/libwayland-client.a
+opt/wayland-rpi/lib/libwayland-client.so
+opt/wayland-rpi/lib/libwayland-cursor.a
+opt/wayland-rpi/lib/libwayland-cursor.so
+opt/wayland-rpi/lib/libwayland-server.a
+opt/wayland-rpi/lib/libwayland-server.so
+opt/wayland-rpi/lib/pkgconfig/wayland-client.pc
+opt/wayland-rpi/lib/pkgconfig/wayland-cursor.pc
+opt/wayland-rpi/lib/pkgconfig/wayland-server.pc
+opt/wayland-rpi/share/aclocal/wayland-scanner.m4
+opt/wayland-rpi/share/aclocal/wayland-scanner.mk

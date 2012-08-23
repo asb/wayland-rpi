@@ -1,0 +1,7 @@
+# Use no wildcards to ensure we spot any update:
+opt/wayland-rpi/lib/libwayland-client.so.0
+opt/wayland-rpi/lib/libwayland-client.so.0.0.0
+opt/wayland-rpi/lib/libwayland-cursor.so.0
+opt/wayland-rpi/lib/libwayland-cursor.so.0.0.0
+opt/wayland-rpi/lib/libwayland-server.so.0
+opt/wayland-rpi/lib/libwayland-server.so.0.0.0

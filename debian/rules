@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 SOURCE=wayland
-PACKAGE=libwayland0
+PACKAGE=libwayland0-rpi
 
 # Kill *.la files, and forget no-one:
 override_dh_install:
@@ -17,6 +17,9 @@ override_dh_strip:
 override_dh_auto_test:
 	# the test suite does not pass completely in headless mode
 	dh_auto_test || true
+
+override_dh_auto_configure:
+	dh_auto_configure -- --prefix=/opt/wayland-rpi
 
 %:
 	dh $@ --with quilt,autoreconf --builddirectory=build/
