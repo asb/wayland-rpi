@@ -39,7 +39,7 @@ Section: debug
 Priority: extra
 Architecture: any
 Depends:
- libwayland0 (= ${binary:Version}),
+ libwayland0-rpi (= ${binary:Version}),
  ${shlibs:Depends},
  ${misc:Depends},
 Description: wayland compositor infrastructure - shared libraries (debug)
